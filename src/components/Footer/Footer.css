@@ -1,0 +1,33 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-sec{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-sec-2{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.footer-item{
+    cursor: pointer;
+}
+
+@media screen and (max-width:730px) {
+    .footer-sec{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .footer-sec p{
+        font-size: .8rem;
+    }
+    
+}

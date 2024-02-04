@@ -1,0 +1,150 @@
+.software{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+.software-header{
+    font-size: 42px;
+    width: 70%;
+}
+.software-text{
+    width: 85%;
+}
+.software-sec{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 4rem;
+}
+
+@media screen and (max-width:830px) {
+    .software-sec{
+        padding: 1rem ;
+    }
+    .software-header{
+        font-size: 33px;
+        width: 80%;
+    }
+
+    
+}
+
+@media screen and (max-width:730px) {
+    .software-sec{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+
+    
+}
+
+
+
+.partners{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.partners-header{
+    font-size: 38px;
+}
+.partners-sec{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.partner-item{
+    width: 200px;
+}
+
+@media screen and (max-width:1050px) {
+    .partners-header{
+        font-size: 33px;
+    }
+    .partner-item{
+        width: 150px;
+    }
+    
+}
+
+@media screen and (max-width:750px) {
+    
+    .partner-item{
+        width: 120px;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .partners-sec{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .partner-item{
+        width: 180px;
+    }
+    
+}
+
+.awards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: black;
+    color: rgb(219, 214, 214);
+    text-align: center;
+}
+.awards-header{
+    font-size: 38px;
+}
+.awards-sec{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.award-item{
+    width: 170px;
+}
+.award-item2{
+    width: 210px;
+}
+
+@media screen and (max-width:800px) {
+    
+    .awards-header{
+        font-size: 30px;
+    }
+    .award-item{
+        width: 130px;
+    }
+    .award-item2{
+        width: 150px;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    
+    .awards-header{
+        font-size: 20px;
+    }
+    .award-item{
+        width: 80px;
+    }
+    .award-item2{
+        width: 100px;
+    }
+    .awards-sec{
+        gap: 5px;
+    }
+    
+}

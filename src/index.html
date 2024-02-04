@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        #dragAndDrop {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #dragAndDrop.drag-over {
+            background-color: #f0f0f0;
+        }
+
+        .file-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .file-item {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragAndDrop">
+        <p class="selected-files">Drag and drop your files here or click to browse</p>
+        <input type="file" id="logoInput" multiple style="display: none;">
+        <div id="fileError"></div>
+        <div class="file-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dragAndDrop = document.getElementById("dragAndDrop");
+            var fileInput = document.getElementById("logoInput");
+            var fileError = document.getElementById("fileError");
+            var fileContainer = document.querySelector(".file-container");
+            var selectedfiles = document.querySelector(".selected-files");
+            var dt = new DataTransfer();
+            dragAndDrop.addEventListener("dragover", function (e) {
+                e.preventDefault();
+                dragAndDrop.classList.add("drag-over");
+            });
+    
+            dragAndDrop.addEventListener("dragleave", function () {
+                dragAndDrop.classList.remove("drag-over");
+            });
+    
+            dragAndDrop.addEventListener("drop", function (e) {
+                e.preventDefault();
+                dragAndDrop.classList.remove("drag-over");
+
+                var files = e.dataTransfer.files;
+
+                if (files.length > 0) {
+                    for (var i = 0; i < files.length; i++) {
+                        dt.items.add(files[i]);
+                    }
+                    fileInput.files = dt.files;
+                    updateFileList();
+                }
+            });
+    
+            fileInput.addEventListener("change", function () {
+                updateFileList();
+            });
+    
+            fileContainer.addEventListener("click", function (e) {
+                if (e.target.classList.contains("remove-btn")) {
+                    var index = parseInt(e.target.getAttribute("data-index"));
+                    removeFile(index);
+                }
+            });
+    
+            function updateFileList() {
+                fileError.textContent = "";
+                var files = fileInput.files;
+    
+                if (files.length > 0) {
+                    selectedfiles.innerHTML = "<p>" + files.length + " Files selected . </p>";
+                    displayFiles();
+                } else {
+                    dragAndDrop.innerHTML = "<p>Drag and drop your files here or click to browse</p>";
+                    fileContainer.innerHTML = "";
+                }
+            }
+    
+            function displayFiles() {
+                fileContainer.innerHTML = "";
+
+                for (var i = 0; i < dt.items.length; i++) {
+                    var fileDiv = document.createElement("div");
+
+                    fileDiv.textContent = dt.items[i].getAsFile().name;
+
+                    var removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+
+                    removeButton.addEventListener("click", function() {
+                        removeFile(i);
+                    });
+
+                    fileDiv.appendChild(removeButton);
+
+                    fileContainer.appendChild(fileDiv);
+                }
+            }
+    
+function removeFile(index) {
+    // Remove the file from the DataTransfer object
+    dt.items.remove(index-1);
+    // Update the file input and the file list
+    fileInput.files = dt.files;
+    displayFiles();
+    updateFileList();
+}
+        });
+    </script>
+</body>
+</html>
