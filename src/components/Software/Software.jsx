@@ -5,7 +5,7 @@ const Software = () => {
     return (
         <div className="software section_padding">
             <h1 className="software-header">It’s the software your team would actually want to use</h1>
-            <p className="software-text">Most digital transformation projects in construction companies fail because the software doesn’t match the needs of your team. With Steer, you won’t have that problem!</p>
+            <p className="software-text">Most digital transformation projects in construction companies fail because the software doesn’t match the needs of your team. With Builders Workflow, you won’t have that problem!</p>
             <div className="software-sec">
                 {softwareData.map((item, index) => (
                     <SolutionCard key={index} icon={item.icon} title={item.title} desc={item.desc} />

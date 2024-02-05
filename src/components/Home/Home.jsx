@@ -5,7 +5,8 @@ const Home = () => {
         <div className='home section_padding'>
             <div className='home-sec1'>
                 <h1 className='home-header'>
-                    Steer is your partner<br /> for Unstoppable Growth
+                Get 160% ROI from staff productivity gains
+just by reducing paperwork  <br />
                 </h1>
                 <p className='home-text'>
                     {homeText}

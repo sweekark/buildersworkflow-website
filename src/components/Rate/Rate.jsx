@@ -8,7 +8,7 @@ const Rate = () => {
                 <div className="rate-sec">
                     <div className="rate-sec-1">
                         <div className="rate-star">★★★★★</div>
-                        <h2 className="rate-header">Steer helped us achieve
+                        <h2 className="rate-header">Builders Workflow helped us achieve
                             20% higher gross profit</h2>
                         <p className="rate-text"><b>Roberto Nuez</b></p>
                         <p>President, Community Developers & Construction Corporation (A PHINMA Company)</p>
@@ -22,7 +22,7 @@ const Rate = () => {
             </div>
             <div className="implement section_padding">
                 <h1 className="implement-header">The Easiest-to-Implement Construction Management Software</h1>
-                <p className="implement-text">With Steer, it takes as fast as a few days <br />to drive up efficiency, improve quality, and ultimately avoid delays & cost overruns</p>
+                <p className="implement-text">With Builders Workflow, it takes as fast as a few days <br />to drive up efficiency, improve quality, and ultimately avoid delays & cost overruns</p>
                 <div className='imple-but'>Book a Meeting</div>
             </div>
 

@@ -4,9 +4,10 @@ const About = () => {
     return (
         <div className='about section_padding'>
             <div className='about-sec-1'>
-                <p className='about-text'>CONSTRUCTION MANAGEMENT SOFTWARE</p>
+                <p className='about-text'>CONSTRUCTION MANAGEMENT SOFTWARE FOR REAL ESTATE DEVELOPER-OWNERS</p>
                 <div>
-                    <h1 className='about-header'>Grow Your Business Fast</h1>
+                    <h1 className='about-header'>Manage Risks to Ensure
+Timely & Quality Delivery</h1>
                     <h1 className='about-header' style={{ color: "rgb(97, 156, 244)" }}>Without Losing Control</h1>
 
                 </div>
@@ -18,7 +19,9 @@ const About = () => {
                 </div>
             </div>
             <div className='about-sec-2'>
-                <iframe className='iframe-about' width="100%" height="315" src="https://www.youtube.com/embed/BONic4GXWjQ?si=pg9PMrSEpnW3E32H" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vVU0psFbYWA?si=NXxhg7B3R64ghXUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                {/* <iframe className='iframe-about' width="100%" height="315"  */}
+                {/* src="https://www.youtube.com/embed/BONic4GXWjQ?si=pg9PMrSEpnW3E32H" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
 
             </div>
 
