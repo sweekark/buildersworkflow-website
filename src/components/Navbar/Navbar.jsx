@@ -7,7 +7,9 @@ const Navbar = () => {
     return (
         <div>
             <div className="navbar section_padding">
-                <div>Logo</div>
+                <div>
+                <img src="bw logo.png" alt="Logo" className="logo" width={50} height={50} />
+                </div>
                 <div className="nav-sec-2">
                     {navItems.map((item, index) => {
                         return (
