@@ -8,21 +8,21 @@ const Navbar = () => {
         <div>
             <div className="navbar section_padding">
                 <div>
-                <img src="bw logo.png" alt="Logo" className="logo" width={50} height={50} />
+                <img src="bw logo.png" alt="Logo" className="logo" width={50} height={50} style={{ marginLeft: '80px' }} />
                 </div>
                 <div className="nav-sec-2">
-                    {navItems.map((item, index) => {
+                    {/* {navItems.map((item, index) => {
                         return (
                             <div key={index} className="nav-item">
                                 {item}
                             </div>
                         )
-                    })}
+                    })} */}
                     <div className="nav-sec-1">
                         Book A Meeting
                     </div>
-
                 </div>
+
                 <div className="menu-but">
                     <Hamburger size={22} toggled={isOpen} toggle={setOpen} />
 
